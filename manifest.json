@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Evaluation Extension",
+    "version": "1.0",
+    "description": "Automatically run evaluation code on specific links.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["https://qalam.nust.edu.pk/student/evaluation/form/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
